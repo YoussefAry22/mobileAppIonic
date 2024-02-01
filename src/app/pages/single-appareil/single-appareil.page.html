@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/appareils"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Single Appareil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <b>{{ deviceName }} </b>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Display additional details or content related to the selected device -->
+      <!-- For example, you can use ngIf to conditionally display content based on the device type -->
+
+      <ion-button expand="full" >Plus d'info sur {{ deviceName }}</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,15 +1,33 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { SingleAppareilPage } from './pages/single-appareil/single-appareil.page';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'appareils',
+    loadChildren: () => import('./pages/appareils/appareils.module').then( m => m.AppareilsPageModule)
+  },
+  {
+    path: 'single-appareil',
+    loadChildren: () => import('./pages/single-appareil/single-appareil.module').then( m => m.SingleAppareilPageModule)
+  },
+  { path: 'single-appareil/:name', component: SingleAppareilPage },
+  {
+    path: 'settings',
+    loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
 ];
 

@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Appareils</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <b>Liste d'appareils:</b>
+
+  <!-- Ajoutez vos boutons ici -->
+  <ion-button expand="full" (click)="goToSingleAppareil('machine-a-laver')">
+    Machine à laver
+  </ion-button>
+
+  <ion-button expand="full" (click)="goToSingleAppareil('television')">
+    Télévision
+  </ion-button>
+</ion-content>
